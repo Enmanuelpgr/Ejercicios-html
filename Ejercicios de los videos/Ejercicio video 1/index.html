@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Documento</title>
+</head>
+<body>
+<div class="form-container">
+    <!--Formulario multi-paso-->
+    <form id="formWizard">
+
+        <!--step 1: Informacion personal-->
+        <div class="form-step active">
+            <h2>Step 1 : Información personal</h2>
+            <input type="text" placeholder="First Name" required>
+            <input type="text" placeholder="Last Name" required>
+            <div class="btns">
+                <!--Next button-->
+                <button type="button" class="next-btn">Next</button>
+            </div>
+        </div>
+
+        <!--step 2: Informacion de contacto-->
+        <div class="form-step">
+            <h2>Step 2 : Información de contacto</h2>
+            <input type="email" placeholder="Email" required>
+            <input type="tel" placeholder="Phone" required>
+            <div class="btns">
+                <!--Back button-->
+                <button type="button" class="prev-btn">Back</button>
+                <!--Next button-->
+                <button type="button" class="next-btn">Next</button>
+            </div>
+        </div>
+
+            <!--step 3: Configuracion de la cuenta-->
+            <div class="form-step">
+                <h2>Step 3 : Configuración de la cuenta</h2>
+                <input type="password" placeholder="Password" required>
+                <input type="password" placeholder="Confirm Password" required>
+                <div class="btns">
+                    <!--Back button-->
+                    <button type="button" class="prev-btn">Back</button>
+                    <!--Submit button-->
+                    <button type="submit">Submit</button>
+                </div>
+            </div>
+
+    </form>
+
+    <!--Barra de progreso-->
+    <div class="progressbar">
+        <div class="progress" id="progress"></div>
+        <!--Indicadores de progreso-->
+        <div class="progress-step progress-step-btn active" data-step="0"></div>
+        <div class="progress-step progress-step-btn" data-step="1"></div>
+        <div class="progress-step progress-step-btn" data-step="2"></div>
+
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
