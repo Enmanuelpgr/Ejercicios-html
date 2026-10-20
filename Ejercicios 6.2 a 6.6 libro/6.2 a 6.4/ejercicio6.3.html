@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>6.3 Objetos</title>
+  <script>
+    // --- Listado 6-65 y 6-66 ---
+    var miobjeto = {
+      nombre: "Juan",
+      edad: 30
+    };
+    alert(miobjeto.nombre + " tiene " + miobjeto.edad + " años");
+
+    /*
+    // --- Listado 6-67 ---
+    var miobjeto = {
+      nombre: "Juan",
+      edad: 30
+    };
+    var mipropiedad = "nombre";
+    alert(miobjeto[mipropiedad]);
+    */
+
+    /*
+    // --- Listado 6-68 ---
+    var miobjeto = {
+      "mi nombre": "Juan",
+      edad: 30
+    };
+    alert(miobjeto["mi nombre"]);
+    */
+
+    /*
+    // --- Listado 6-69 ---
+    var miobjeto = {
+      nombre: "Juan",
+      edad: 30
+    };
+    miobjeto.edad = 35;
+    miobjeto.trabajo = "Programador";
+    alert(miobjeto.nombre + " - " + miobjeto.edad + " - " + miobjeto.trabajo);
+    */
+
+    /*
+    // --- Listado 6-70 ---
+    var miobjeto = {
+      nombre: "Juan",
+      edad: 30,
+      motocicleta: {
+        modelo: "Susuki",
+        fecha: 1981
+      }
+    };
+    alert(miobjeto.nombre + " tiene una " + miobjeto.motocicleta.modelo);
+    */
+
+    /*
+    // --- Listado 6-71 ---
+    var miobjeto = {
+      nombre: "Juan",
+      edad: 30,
+      mostrar: function() {
+        alert("Método ejecutado");
+      }
+    };
+    miobjeto.mostrar();
+    */
+
+    /*
+    // --- Listado 6-72 ---
+    var miobjeto = {
+      nombre: "Juan",
+      edad: 30,
+      mostrar: function(valor) {
+        return "El valor es " + valor;
+      }
+    };
+    alert(miobjeto.mostrar(15));
+    */
+
+    /*
+    // --- Listado 6-73 ---
+    var miobjeto = {
+      nombre: "Juan",
+      edad: 30,
+      mostrarNombre: function() {
+        alert(this.nombre);
+      },
+      cambiarNombre: function(nombreNuevo) {
+        this.nombre = nombreNuevo;
+      }
+    };
+    miobjeto.mostrarNombre();
+    miobjeto.cambiarNombre("Carlos");
+    miobjeto.mostrarNombre();
+    */
+
+    /*
+    // --- Listado 6-74 ---
+    var constructor = function() {
+      var obj = {
+        nombre: "Juan",
+        edad: 30,
+        mostrarNombre: function() {
+          alert(this.nombre);
+        },
+        cambiarNombre: function(nombreNuevo) {
+          this.nombre = nombreNuevo;
+        }
+      };
+      return obj;
+    };
+    var empleado = constructor();
+    empleado.mostrarNombre();
+    */
+
+    /*
+    // --- Listado 6-75 y 6-76 ---
+    var constructor = function(nombreInicial) {
+      var obj = {
+        nombre: nombreInicial,
+        edad: 30,
+        mostrarNombre: function() {
+          alert(this.nombre);
+        }
+      };
+      return obj;
+    };
+    var empleado1 = constructor("Juan");
+    var empleado2 = constructor("Carlos");
+    var empleado3 = constructor("Roberto");
+    empleado1.mostrarNombre();
+    empleado2.mostrarNombre();
+    empleado3.mostrarNombre();
+    */
+
+    /*
+    // --- Listado 6-77 ---
+    var constructor = function() {
+      var nombre = "Juan";
+      var obj = {
+        mostrarNombre: function() {
+          alert(nombre);
+        },
+        cambiarNombre: function(nombreNuevo) {
+          nombre = nombreNuevo;
+        }
+      };
+      return obj;
+    };
+    var empleado = constructor();
+    empleado.mostrarNombre();
+    */
+
+    /*
+    // --- Listado 6-78 y 6-79 ---
+    function MiObjeto(nombreInicial, edadInicial) {
+      this.nombre = nombreInicial;
+      this.edad = edadInicial;
+      this.mostrarNombre = function() {
+        alert(this.nombre + " - " + this.edad);
+      };
+    }
+    var empleado = new MiObjeto("Roberto", 45);
+    empleado.mostrarNombre();
+    */
+
+    /*
+    // --- Listado 6-80, 6-81 y 6-82 ---
+    var miobjeto = {
+      nombre: "Juan",
+      edad: 30,
+      mostrarNombre: function() {
+        alert(this.nombre);
+      },
+      cambiarNombre: function(nombreNuevo) {
+        this.nombre = nombreNuevo;
+      }
+    };
+    var empleado = Object.create(miobjeto);
+    empleado.cambiarNombre("Roberto");
+    miobjeto.mostrarEdad = function() {
+      alert(this.edad);
+    };
+    empleado.mostrarEdad();
+    */
+  </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>6.2 Funciones</title>
+  <script>
+    // --- Listado 6-50 ---
+    function mostrarMensaje() {
+      alert("Hola Mundo");
+    }
+    mostrarMensaje();
+
+    /*
+    // --- Listado 6-51 ---
+    var total = 0;
+    function calcularValores() {
+      for (var f = 0; f < 5; f++) {
+        total = total + f;
+      }
+      alert(total);
+    }
+    calcularValores();
+    */
+
+    /*
+    // --- Listado 6-52 ---
+    var variableGlobal = 5;
+    function mifuncion() {
+      var variableLocal = "El valor es ";
+      alert(variableLocal + variableGlobal);
+    }
+    mifuncion();
+    */
+
+    /*
+    // --- Listado 6-53 ---
+    var mivariable = 5;
+    function mifuncion() {
+      var mivariable = "Esta es una variable local";
+      alert(mivariable);
+    }
+    mifuncion();
+    alert(mivariable);
+    */
+
+    /*
+    // --- Listado 6-54 ---
+    function mifuncion(valor) {
+      alert(valor);
+    }
+    mifuncion(5);
+    */
+
+    /*
+    // --- Listado 6-55 ---
+    function mifuncion(valor) {
+      var resultado = valor * 2;
+      alert(resultado);
+    }
+    mifuncion(5);
+    mifuncion(8);
+    */
+
+    /*
+    // --- Listado 6-56 ---
+    var mivariable = 5;
+    function mifuncion(valor) {
+      alert(valor);
+    }
+    mifuncion(mivariable);
+    */
+
+    /*
+    // --- Listado 6-57 ---
+    function mifuncion(valor1, valor2) {
+      var resultado = valor1 + valor2;
+      alert(resultado);
+    }
+    mifuncion(5, 10);
+    */
+
+    /*
+    // --- Listado 6-58 ---
+    function mifuncion(valor) {
+      var resultado = valor * 2;
+      return resultado;
+    }
+    var total = mifuncion(5);
+    alert(total);
+    */
+
+    /*
+    // --- Listado 6-59 ---
+    function mifuncion(valor) {
+      if (valor < 10) {
+        return valor * 2;
+      } else {
+        return valor;
+      }
+    }
+    var total = mifuncion(5);
+    alert(total);
+    */
+
+    /*
+    // --- Listado 6-60 ---
+    var mifuncion = function(valor) {
+      return valor * 2;
+    };
+    var total = mifuncion(5);
+    alert(total);
+    */
+
+    /*
+    // --- Listado 6-61 ---
+    (function() {
+      var mivariable = 5;
+      alert(mivariable);
+    })();
+    */
+
+    /*
+    // --- Listado 6-62 ---
+    var mivalor = "Hola";
+    if (isNaN(mivalor)) {
+      alert(mivalor + " no es un número");
+    } else {
+      alert(mivalor + " es un número");
+    }
+    */
+
+    /*
+    // --- Listado 6-63 ---
+    var mivalor = "32";
+    if (isNaN(mivalor)) {
+      alert(mivalor + " no es un número");
+    } else {
+      var numero = parseInt(mivalor);
+      numero = numero + 10;
+      alert(numero);
+    }
+    */
+
+    /*
+    // --- Listado 6-64 ---
+    var nombre = "Juan Pérez";
+    var codificado = encodeURIComponent(nombre);
+    var miurl = "http://www.ejemplo.com/contacto.html?nombre=" + codificado;
+    alert(miurl);
+    */
+  </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>6.4 Objetos Estándar</title>
+  <style>
+    .colorazul { background-color: #0000FF; color: #FFFFFF; }
+  </style>
+  <script>
+    // --- Listado 6-83, 6-84 y 6-85 ---
+    var valor = new Number(5);
+    var total = valor * 2;
+    alert(total);
+
+    /*
+    // --- Listados 6-86 y 6-87 ---
+    var lista = new Array(12, 35, 57);
+    alert(lista);
+    */
+
+    /*
+    // --- Listados 6-88 al 6-101 ---
+    var texto = "Hola Mundo";
+    alert(texto.length);
+    alert(texto.toUpperCase());
+    alert(texto.substr(0, 4));
+    alert(texto.replace("Mundo", "Planeta"));
+    */
+
+    /*
+    // --- Listados 6-102 al 6-120 ---
+    var lista = [12, 5, 80, 34];
+    var filtrada = lista.filter(function(valor) {
+      return valor <= 50;
+    });
+    alert(filtrada);
+    */
+
+    /*
+    // --- Listados 6-121 al 6-131 ---
+    var hoy = new Date();
+    alert(hoy);
+    */
+
+    /*
+    // --- Listados 6-132 y 6-133 ---
+    var entero = Math.floor(125.65);
+    var azar = Math.floor(Math.random() * 10) + 1;
+    alert(entero + " - " + azar);
+    */
+
+    /*
+    // --- Listados 6-134 al 6-138 ---
+    var contador = 0;
+    function mostrarMensaje() {
+      contador++;
+      alert(contador);
+      if (contador >= 3) {
+        clearInterval(intervalo);
+      }
+    }
+    var intervalo = setInterval(mostrarMensaje, 2000);
+    */
+
+    /*
+    // --- Listados 6-139 al 6-155 ---
+    function iniciar() {
+      var elemento = document.getElementById("subtitulo");
+      elemento.style.backgroundColor = "#0000FF";
+      elemento.innerHTML = "Título Modificado";
+    }
+    window.onload = iniciar;
+    */
+  </script>
+</head>
+<body>
+  <section id="principal">
+    <h1 id="subtitulo" class="miclase">Subtítulo</h1>
+    <p id="parrafo1" class="miclase">Frase 1</p>
+    <div id="contenedor"></div>
+  </section>
+</body>
+</html>

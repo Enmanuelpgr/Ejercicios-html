@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>6.6 Depuración</title>
+  <script>
+    // --- Listado 6-167 ---
+    function iniciar() {
+      var lista = [12, 5, 80, 34];
+      console.log(lista);
+    }
+    window.addEventListener("load", iniciar);
+
+    /*
+    // --- Listado 6-168 ---
+    function manejarError(evento) {
+      console.log("Error: " + evento.message + " en la línea " + evento.lineno);
+      evento.preventDefault();
+    }
+    window.addEventListener("error", manejarError);
+    */
+
+    /*
+    // --- Listado 6-169 ---
+    function procesarDatos(valor) {
+      if (isNaN(valor)) {
+        throw "El valor introducido no es un número";
+      }
+      return valor * 2;
+    }
+    function iniciarExcepcion() {
+      try {
+        var total = procesarDatos("Hola");
+        console.log(total);
+      } catch (error) {
+        console.log("Error: " + error);
+      }
+    }
+    window.addEventListener("load", iniciarExcepcion);
+    */
+  </script>
+</head>
+<body>
+  <section>
+    <p>Abre la Consola (F12)</p>
+  </section>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>6.5 Eventos</title>
+  <style>
+    #bloque { width: 300px; height: 100px; background-color: #CCCCCC; }
+  </style>
+  <script>
+    // --- Listado 6-157 ---
+    function mostrarMensaje() {
+      alert("El usuario hizo clic en el elemento");
+    }
+    function iniciar() {
+      var elemento = document.getElementById("bloque");
+      elemento.addEventListener("click", mostrarMensaje);
+    }
+    window.addEventListener("load", iniciar);
+
+    /*
+    // --- Listado 6-156 ---
+    function mostrarMensaje() {
+      alert("El usuario hizo clic en el elemento");
+    }
+    function iniciar() {
+      var elemento = document.getElementById("bloque");
+      elemento.onclick = mostrarMensaje;
+    }
+    window.onload = iniciar;
+    */
+
+    /*
+    // --- Listados 6-158 y 6-159 ---
+    function iniciar() {
+      var elemento = document.getElementById("bloque");
+      elemento.addEventListener("click", function(evento) {
+        var elem = evento.target;
+        alert("Clic en el elemento con id: " + elem.id);
+      });
+    }
+    window.addEventListener("load", iniciar);
+    */
+
+    /*
+    // --- Listados 6-162 y 6-163 ---
+    function moverRaton(evento) {
+      var x = evento.clientX;
+      var y = evento.clientY;
+      var bloque = document.getElementById("bloque");
+      bloque.innerHTML = "Posición X: " + x + " - Posición Y: " + y;
+    }
+    window.addEventListener("mousemove", moverRaton);
+    */
+
+    /*
+    // --- Listados 6-164 y 6-165 ---
+    function detectarTecla(evento) {
+      if (evento.shiftKey) {
+        alert("Se presionó la tecla " + evento.keyCode + " junto con Shift");
+      }
+    }
+    window.addEventListener("keydown", detectarTecla);
+    */
+  </script>
+</head>
+<body>
+  <section>
+    <div id="bloque">Bloque de prueba</div>
+  </section>
+</body>
+</html>
